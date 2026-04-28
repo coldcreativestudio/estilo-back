@@ -1,7 +1,13 @@
 require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
+// No seu backend (server.js)
+// No seu backend (server.js)
 const cors = require('cors');
+
+app.use(cors({
+  origin: 'https://est1lo.vercel.app/' // Coloque aqui o link que a Vercel te deu
+}));
 const routes = require('./routes/productRoutes');
 
 const app = express();
